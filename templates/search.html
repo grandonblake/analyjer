@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: whitesmoke;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        background-color: #1e2432;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 20px 40px;
+        margin: 0 20px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+        font-size: 24px;
+        transition: background-color 0.5s ease;
+      }
+
+      nav a:hover {
+        background-color: #e85d04;
+        color: #fff;
+      }
+      .outer-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+        background-color: transparent;
+      }
+
+      .inner-container {
+        padding: 60px;
+        background-color: #1e2432;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        color: #fff;
+        max-width: 800px;
+        width: 30%;
+        text-align: center;
+      }
+
+      h1 {
+        color:#dbd3d3;
+        font-size: 40px;
+        margin-bottom: 30px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      ::placeholder{
+        color:rgb(59, 57, 57);
+        opacity: 1;
+      }
+      input[type="text"],
+      input[type="submit"] {
+        padding: 15px;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 500px;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        background-color: #f08543;
+        color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease;
+      }
+
+      input[type="submit"] {
+        background-color: #e85d04;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 200px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #f08543;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/theteam">The Team</a>
+      <a href="/contact">Contact</a>
+    </nav>
+
+    <div class="outer-container">
+      <div class="inner-container">
+        <h1>Search</h1>
+        <form action="/result" method="POST">
+          <input type="text" name="query" placeholder="Enter item URL" />
+          <input
+            type="text"
+            name="numReviews"
+            placeholder="Enter number of reviews to analyze"
+          />
+          <input type="submit" value="Search" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Home Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: whitesmoke;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 48px;
+      }
+
+      nav {
+        background-color: #1e2432;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 20px 40px;
+        margin: 0 20px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+        font-size: 24px;
+        transition: background-color 0.5s ease;
+      }
+
+      nav a:hover {
+        background-color: #e85d04;
+        color: #fff;
+      }
+
+      main {
+        display: flex;
+        padding: 40px;
+        margin-left: 8%;
+        margin-top: 3%;
+        align-items: flex-start;
+      }
+
+      .content {
+        width: 50%;
+      }
+
+      h2 {
+        font-size: 36px;
+        color: #dc2f02;
+      }
+
+      p {
+        font-size: 24px;
+        color: #c45612
+      }
+
+      .image-container {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+      }
+
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+      }
+
+      .button-container {
+        margin-top: 8%;
+        margin-right: 5%;
+        display: flex;
+        justify-content: end;
+      }
+
+      .button {
+        padding: 15px 25px;
+        background-color: #e85d04;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+      }
+
+      .button:hover {
+        background-color: #dc2f02;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/theteam">The Team</a>
+      <a href="/contact">Contact</a>
+    </nav>
+
+    <main>
+      <div class="content">
+        <h2>AnalyJer: Market Reviews Analyzer</h2>
+        <p>
+          Make smarter decisions for your business with AnalyJer: Market Review Analyzer. 
+          Our advanced AI-powered market intelligence tool is designed to provide a comprehensive understanding of customer sentiments, 
+          giving you the insights you need to stay ahead of the competition. 
+          Leverage the power of Natural Language Processing and sentiment analysis to transform how your business approaches customer reviews, 
+          and gain a competitive edge in the market.
+        </p>
+        <div class="button-container">
+          <a href="/search" class="button">Continue</a>
+        </div>
+      </div>
+      <div class="image-container">
+        <img
+          src="https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80.jpg"
+          alt="Image Description"
+          style="max-width: 600px; max-height: 600px; margin-right: 20%"
+        />
+      </div>
+    </main>
+  </body>
+</html>

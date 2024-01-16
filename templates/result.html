@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Home Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: whitesmoke;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 48px;
+      }
+
+      nav {
+        background-color: #1e2432;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 20px 40px;
+        margin: 0 20px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+        font-size: 24px;
+        transition: background-color 0.5s ease;
+      }
+
+      nav a:hover {
+        background-color: #fff;
+        color: #1e2432;
+      }
+
+      .outer-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+      }
+
+      .inner-container {
+        padding: 60px;
+        margin: 40px;
+        background-color: #1e2432;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        color: #fff;
+        max-width: 800px;
+        width: 80%;
+        text-align: center;
+        position: relative; /* Added */
+      }
+
+      .button-div {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .button-div button {
+        padding: 15px 25px;
+        background-color: #dc2f02;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .button-div button:hover {
+        background-color: #e85d04;
+      }
+
+      .go-back-link {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        font-size: 18px;
+        color: #fff;
+        text-decoration: underline;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .go-back-link:hover {
+        color: #e85d04;
+      }
+    </style>
+    <script>
+      function showButtonDiv(buttonId, divId) {
+        var button = document.getElementById(buttonId)
+        var div = document.getElementById(divId)
+
+        div.style.display = "block"
+
+        var otherButtonId = buttonId === "button1" ? "button2" : "button1"
+        var otherDivId = divId === "div1" ? "div2" : "div1"
+        var otherDiv = document.getElementById(otherDivId)
+        otherDiv.style.display = "none"
+      }
+    </script>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/theteam">The Team</a>
+      <a href="/contact">Contact</a>
+    </nav>
+
+    <div class="outer-container">
+      <div class="inner-container">
+        <h1>Data Analytics</h1>
+        <div class="button-div">
+          <button id="button1" onclick="showButtonDiv('button1', 'div1')">
+            Individual Reviews
+          </button>
+          <button id="button2" onclick="showButtonDiv('button2', 'div2')">
+            Graphs
+          </button>
+        </div>
+        <div id="div1" class="hidden">
+          <div class="container">{{htmlToPrint|safe}}</div>
+        </div>
+        <div id="div2" class="hidden">
+          <div id="chart"></div>
+          <div id="chart1"></div>
+          <div id="chart2"></div>
+          <div id="chart3"></div>
+          <div id="chart4"></div>
+        </div>
+        <a href="/search" class="go-back-link">Go back</a> 
+        <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+        <script type='text/javascript'>
+          var graphs = {{graphJSON | safe}};
+          Plotly.plot('chart',graphs,{});
+        </script>
+        <script type='text/javascript'>
+          var graphs = {{graphJSON2 | safe}};
+          Plotly.plot('chart1',graphs,{});
+        </script>
+         <script type='text/javascript'>
+          var graphs = {{graphJSON3 | safe}};
+          Plotly.plot('chart2',graphs,{});
+        </script>
+          <script type='text/javascript'>
+            var graphs = {{graphJSON4 | safe}};
+            Plotly.plot('chart3',graphs,{});
+          </script>
+          <script type='text/javascript'>
+            var graphs = {{graphJSON5 | safe}};
+            Plotly.plot('chart4',graphs,{});
+          </script>
+      </div>
+    </div>
+  </body>
+</html>
