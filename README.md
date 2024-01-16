@@ -30,10 +30,10 @@ The study on AnalyJer and its application in market intelligence contributes to 
 - AliExpress API: AliExpress is an online retail platform owned by Alibaba Group, one of the world's largest e-commerce companies. It serves as a marketplace connecting international buyers with sellers primarily based in China and other countries. It is utilized to fetch the data and customer reviews from AliExpress, allowing for real-time analysis and insights. The API provides access to the necessary data for training and evaluating the AnalyJer system.
 
 ## Project Screenshots
-<img src="/screenshots/HomeScreen.jpg" width=25% height=25%>
-<img src="/screenshots/SearchScreen.jpg" width=25% height=25%>
-<img src="/screenshots/ResultScreen.jpg" width=25% height=25%>
-<img src="/screenshots/ResultScreen2.jpg" width=25% height=25%>
-<img src="/screenshots/ResultScreen3.jpg" width=25% height=25%>
-<img src="/screenshots/ResultScreen4.jpg" width=25% height=25%>
+<img src="/screenshots/HomeScreen.jpg" width=80% height=80%>
+<img src="/screenshots/SearchScreen.jpg" width=80% height=80%>
+<img src="/screenshots/ResultScreen.jpg" width=80% height=80%>
+<img src="/screenshots/ResultScreen2.jpg" width=80% height=80%>
+<img src="/screenshots/ResultScreen3.jpg" width=80% height=80%>
+<img src="/screenshots/ResultScreen4.jpg" width=80% height=80%>
 
